@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // This tells Vite to inject the URL you set on the Render dashboard
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000', 
+  // Notice the + '/api' added to the end!
+  baseURL: (import.meta.env.VITE_API_URL || 'http://localhost:8000') + '/api', 
   headers: { 'Content-Type': 'application/json' },
 });
 // ── Clients ──
